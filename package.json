@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0-beta2",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
