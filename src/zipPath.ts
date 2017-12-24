@@ -48,12 +48,18 @@ export async function unzipPath(zipFile: string, targetPath: string) {
  * @param {string} zipFile - zip 文件
  * @param {(fileName: string, buffer: Buffer) => {}} eachEntry - 文件Buffer
  */
-export function readZip(zipFile: string, eachEntry: (fileName: string, buffer: Buffer) => {}) {
-  let admZip = new AdmZip(zipFile);
+export async function readZip(zipFile: string, eachEntry: (fileName: string, buffer: Buffer) => void) {
+  return new Promise((resolve, reject) => {
+    let admZip = new AdmZip(zipFile);
 
-  let zipEntries = admZip.getEntries();
-  zipEntries.forEach(entry => {
-    let zipEntry = admZip.getEntry(entry.entryName);
-    eachEntry(zipEntry.entryName, zipEntry.getData());
+    let zipEntries = admZip.getEntries();
+    zipEntries.forEach((entry, index, array) => {
+      let zipEntry = admZip.getEntry(entry.entryName);
+      eachEntry(zipEntry.entryName, zipEntry.getData());
+
+      if (index == array.length - 1) {
+        resolve();
+      }
+    });
   });
 }

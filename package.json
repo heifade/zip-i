@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.0-beta3",
+  "version": "1.0.0-beta4",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -14,8 +14,6 @@
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
-    "fs-extra": "^5.0.0",
-    "fs-i": "^1.0.0-beta5",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
     "source-map-support": "^0.5.0",
@@ -52,6 +50,8 @@
   "author": "heifade",
   "license": "MIT",
   "dependencies": {
-    "adm-zip": "^0.4.7"
+    "adm-zip": "^0.4.7",
+    "fs-extra": "^5.0.0",
+    "fs-i": "^1.0.0-beta10"
   }
 }
