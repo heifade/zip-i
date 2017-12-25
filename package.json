@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.0-beta7",
+  "version": "1.0.0-beta8",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -52,6 +52,6 @@
   "dependencies": {
     "adm-zip": "^0.4.7",
     "fs-extra": "^5.0.0",
-    "fs-i": "^1.0.0-beta13"
+    "fs-i": "^1.0.3"
   }
 }
