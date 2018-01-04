@@ -4,10 +4,9 @@ node_js:
   - "8"
 before_script:
   - npm i pcreate
-  - ls node_modules
 script:
   - npm run test
-  - npm run build2
+  - npm run build
 after_script:
   - npm run test-nyc
   
