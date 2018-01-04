@@ -10,6 +10,7 @@ script:
   - npm run build2
 after_script:
   - npm run test-nyc
+  
 
 cache:
   directories:
