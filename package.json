@@ -27,6 +27,7 @@
     "code-build": "tsc -p tsconfig.json",
     "docs": "typedoc --out docs src --module commonjs --hideGenerator && node ./tools/formatDocs.js",
     "build": "npm run clean && npm run code-build && npm run docs",
+    "build2": "pcreate build",
     "test": "nyc mocha -t 5000",
     "test-nyc": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "start": "npm run build && node ./es/index.js"
@@ -53,5 +54,8 @@
     "adm-zip": "^0.4.7",
     "fs-extra": "^5.0.0",
     "fs-i": "^1.0.4"
+  },
+  "bin": {
+    "zip-i": "./es/bin/zip-i"
   }
 }
