@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -26,6 +26,7 @@
   "author": "heifade",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^8.5.7",
     "adm-zip": "^0.4.7",
     "fs-extra": "^5.0.0",
     "fs-i": "^1.0.4"
