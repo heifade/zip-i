@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -13,30 +13,12 @@
     "@types/chai": "^4.0.5",
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
-    "coveralls": "^3.0.0",
     "mocha": "^4.0.1",
-    "nyc": "^11.3.0",
-    "ts-node": "^4.1.0",
     "typescript": "^2.6.1"
   },
   "scripts": {
     "build": "pcreate build",
-    "test": "nyc mocha -t 5000",
-    "test-nyc": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "start": "npm run build && node ./es/index.js"
-  },
-  "nyc": {
-    "include": [
-      "src/**/*.ts"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "sourceMap": true,
-    "instrument": true
+    "start": "pcreate build && node ./es/index.js"
   },
   "keywords": [
     "zip-i"
