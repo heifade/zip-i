@@ -5,6 +5,7 @@ let projectConfig: IProjectConfig = {
   projectType: 'node',
   command: true,
   documents: true,
+  unitTest: true,
 }
 
 export default projectConfig;
