@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -18,8 +18,7 @@
     "@types/fs-extra": "^5.0.0",
     "@types/mocha": "^2.2.44",
     "chai": "^4.1.2",
-    "mocha": "^4.0.1",
-    "typescript": "^2.6.1"
+    "mocha": "^4.0.1"
   },
   "scripts": {
     "build": "pcreate build",
@@ -31,10 +30,11 @@
   "author": "heifade",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^8.5.7",
+    "@types/node": "^9.3.0",
     "adm-zip": "^0.4.7",
     "fs-extra": "^5.0.0",
-    "fs-i": "^1.0.4"
+    "fs-i": "^1.0.4",
+    "pcreate-config": "^1.0.7"
   },
   "bin": {
     "zip-i": "./es/bin/zip-i"
