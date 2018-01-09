@@ -8,9 +8,10 @@ let projectConfig: ProjectConfigModel = {
     target: "ESNEXT",
     declaration: true
   },
-  command: true,
+  command: false,
   documents: true,
-  unitTest: true
+  unitTest: true,
+  sourceInclude: ["./src/**/*"]
 };
 
 export default projectConfig;
