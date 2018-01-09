@@ -9,7 +9,7 @@ let projectConfig: ProjectConfigModel = {
     declaration: true
   },
   command: true,
-  documents: true,
+  documents: false,
   unitTest: true
 };
 
