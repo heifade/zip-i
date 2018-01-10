@@ -5,7 +5,7 @@ let projectConfig: ProjectConfigModel = {
   compile: {
     outDir: "./es/",
     module: "commonjs",
-    target: "ESNEXT",
+    target: "ES2016",
     declaration: true
   },
   command: false,
