@@ -5,7 +5,7 @@ let projectConfig: ProjectConfigModel = {
   compile: {
     outDir: "./es/",
     module: "commonjs",
-    target: "ES2016",
+    target: "es5",
     lib: ["es2015", "es2015.promise", "es2015.symbol"],
     declaration: true
   },
