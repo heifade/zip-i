@@ -10,7 +10,7 @@ let projectConfig: ProjectConfigModel = {
     declaration: true
   },
   command: false,
-  documents: true,
+  documents: false,
   unitTest: true,
   sourceInclude: ["./src/**/*"]
 };
