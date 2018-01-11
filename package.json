@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -34,8 +34,5 @@
     "adm-zip": "^0.4.7",
     "fs-i": "^1.1.5",
     "pcreate-config": "^1.0.11"
-  },
-  "bin": {
-    "zip-i": "./es/bin/zip-i"
   }
 }
