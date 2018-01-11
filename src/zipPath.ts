@@ -1,5 +1,5 @@
 import { getAllFiles } from "fs-i";
-import AdmZip from "adm-zip";
+import * as AdmZip from "adm-zip";
 
 /**
  * 压缩目录及子目录成zip文件
