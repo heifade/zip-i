@@ -1,8 +1,7 @@
 import { expect } from "chai";
 import "mocha";
 import { zipPath, unzipPath, readZip } from "../src/index";
-import { getAllFiles, getFileName } from "fs-i";
-import { emptyDirSync, rmdirSync, removeSync } from "fs-extra";
+import { getAllFiles, getFileName, rmdirSync, deleteFileSync } from "fs-i";
 
 describe("zipPath", function() {
   let sourcePath = `${__dirname}/testPath`;
@@ -10,16 +9,14 @@ describe("zipPath", function() {
   let sourcePath2 = `${__dirname}/testPath2`;
 
   before(async () => {
-    emptyDirSync(sourcePath2);
     rmdirSync(sourcePath2);
 
-    removeSync(zipFile);
+    deleteFileSync(zipFile);
   });
   after(async () => {
-    emptyDirSync(sourcePath2);
     rmdirSync(sourcePath2);
 
-    removeSync(zipFile);
+    deleteFileSync(zipFile);
   });
 
   it("zipPath should be success", async () => {
