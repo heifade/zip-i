@@ -1,6 +1,6 @@
 {
   "name": "zip-i",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "zip-i",
   "main": "./es/index.js",
   "module": "./es/index.js",
@@ -32,7 +32,7 @@
   "dependencies": {
     "@types/node": "^9.3.0",
     "adm-zip": "^0.4.7",
-    "fs-i": "^1.1.3",
+    "fs-i": "^1.1.5",
     "pcreate-config": "^1.0.11"
   },
   "bin": {
