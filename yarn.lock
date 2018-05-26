@@ -20,7 +20,7 @@
   version "10.1.2"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-10.1.2.tgz#1b928a0baa408fc8ae3ac012cc81375addc147c6"
 
-adm-zip@^0.4.7:
+adm-zip@^0.4.11:
   version "0.4.11"
   resolved "http://registry.npm.taobao.org/adm-zip/download/adm-zip-0.4.11.tgz#2aa54c84c4b01a9d0fb89bb11982a51f13e3d62a"
 
