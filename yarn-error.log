@@ -1,0 +1,74 @@
+Arguments: 
+  /usr/local/Cellar/node/10.2.1/bin/node /usr/local/bin/yarn test
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.2.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "zip-i",
+    "version": "1.0.53",
+    "description": "zip-i",
+    "main": "./es/index.js",
+    "module": "./es/index.js",
+    "typings": "./es/index",
+    "files": [
+      "es"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/heifade/zip-i.git"
+    },
+    "devDependencies": {
+      "@types/adm-zip": "^0.4.31",
+      "@types/chai": "^4.1.0",
+      "@types/mocha": "^2.2.46",
+      "chai": "^4.1.2",
+      "mocha": "^4.1.0",
+      "pcreate-config": "^1.1.16"
+    },
+    "scripts": {
+      "build": "pcreate build",
+      "start": "pcreate build && node ./es/index.js",
+      "test": "pcreate test"
+    },
+    "keywords": [
+      "zip-i"
+    ],
+    "author": "heifade",
+    "license": "MIT",
+    "dependencies": {
+      "adm-zip": "^0.4.11",
+      "fs-i": "^1.2.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c pcreate test
+  Directory: /Volumes/RamDisk/temp/zip-i
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:182:13)
+      at maybeClose (internal/child_process.js:961:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:248:5)

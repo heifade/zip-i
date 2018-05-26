@@ -1,4 +1,4 @@
-import { getAllFiles } from "fs-i";
+import { getAllFiles, existsSync, mkdirsSync } from "fs-i";
 import * as AdmZip from "adm-zip";
 import * as fs from "fs";
 import * as path from "path";
@@ -42,8 +42,12 @@ export async function unzipPath(zipFile: string, targetPath: string) {
     // admZip.extractEntryTo(entry.entryName, targetPath, false, true);
 
     let buffer = admZip.readFile(entry.entryName);
-    let filePath = path.resolve(targetPath, entry.entryName);
-    fs.writeFileSync(filePath, buffer);
+    let fileName = path.resolve(targetPath, entry.entryName);
+    let filePath = path.dirname(fileName);
+    if (!existsSync(filePath)) {
+      mkdirsSync(filePath);
+    }
+    fs.writeFileSync(fileName, buffer);
   });
 }
 
