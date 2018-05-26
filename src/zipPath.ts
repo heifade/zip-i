@@ -35,10 +35,11 @@ export async function zipPath(sourcePath: string, zipFile: string) {
 export async function unzipPath(zipFile: string, targetPath: string) {
   let admZip = new AdmZip(zipFile);
 
-  let zipEntries = admZip.getEntries();
-  zipEntries.forEach(entry => {
-    admZip.extractEntryTo(entry.entryName, targetPath);
-  });
+  // let zipEntries = admZip.getEntries();
+  // zipEntries.forEach(entry => {
+  //   admZip.extractEntryTo(entry.entryName, targetPath);
+  // });
+  await admZip.extractAllTo(targetPath, true);
 }
 
 /**
