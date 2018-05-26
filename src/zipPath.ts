@@ -1,5 +1,7 @@
 import { getAllFiles } from "fs-i";
 import * as AdmZip from "adm-zip";
+import * as fs from "fs";
+import * as path from "path";
 
 /**
  * 压缩目录及子目录成zip文件
@@ -37,9 +39,12 @@ export async function unzipPath(zipFile: string, targetPath: string) {
 
   let zipEntries = admZip.getEntries();
   zipEntries.forEach(entry => {
-    admZip.extractEntryTo(entry.entryName, targetPath);
+    // admZip.extractEntryTo(entry.entryName, targetPath, false, true);
+
+    let buffer = admZip.readFile(entry.entryName);
+    let filePath = path.resolve(targetPath, entry.entryName);
+    fs.writeFileSync(filePath, buffer);
   });
-  // await admZip.extractAllTo(targetPath, true);
 }
 
 /**
