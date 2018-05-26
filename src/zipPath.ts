@@ -37,18 +37,12 @@ export async function zipPath(sourcePath: string, zipFile: string) {
 export async function unzipPath(zipFile: string, targetPath: string) {
   let admZip = new AdmZip(zipFile);
 
-  let zipEntries = admZip.getEntries();
-  zipEntries.forEach(entry => {
-    // admZip.extractEntryTo(entry.entryName, targetPath, false, true);
+  // let zipEntries = admZip.getEntries();
+  // zipEntries.forEach(entry => {
+  //   admZip.extractEntryTo(entry.entryName, targetPath, false, true);
+  // });
 
-    let buffer = admZip.readFile(entry.entryName);
-    let fileName = path.resolve(targetPath, entry.entryName);
-    let filePath = path.dirname(fileName);
-    if (!existsSync(filePath)) {
-      mkdirsSync(filePath);
-    }
-    fs.writeFileSync(fileName, buffer);
-  });
+  admZip.extractAllTo(targetPath, true);
 }
 
 /**

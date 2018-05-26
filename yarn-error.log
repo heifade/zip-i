@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "zip-i",
-    "version": "1.0.53",
+    "version": "1.0.54",
     "description": "zip-i",
     "main": "./es/index.js",
     "module": "./es/index.js",
