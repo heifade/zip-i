@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import "mocha";
 import { zipPath, unzipPath, readZip } from "../src/index";
-import { getAllFiles, getFileName, rmdirSync, deleteFileSync } from "fsi";
+import { getAllFiles, getFileName, rmdirSync, deleteFileSync } from "fs-i";
 
 describe("zipPath", function() {
   let sourcePath = `${__dirname}/testPath`;
